@@ -13,8 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/main',[\App\Http\Controllers\MainControler::class,'main']);
-
-Route::get('/main/listing',[\App\Http\Controllers\ListingControler::class,'listing']);
-
-
+Route::get('/',[\App\Http\Controllers\EnderecoController::class,'index']);
+Route::resource('/cadastro', EnderecoController::class);
